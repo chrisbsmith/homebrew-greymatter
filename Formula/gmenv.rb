@@ -15,13 +15,13 @@ class Gmenv < Formula
   end
 
   def post_install
-    versions_path = HOMEBREW_PREFIX/"etc/#{name}/version"
-    versions_local = buildpath/"versions"
+    versions_path = HOMEBREW_PREFIX/"etc/#{name}/versions"
+    #versions_local = buildpath/"versions"
 
-    mkdir_p versions_path if File.directory?(version_path)
+    mkdir_p versions_path # if File.directory?(version_path)
 
-    mkdir_p versions_local
-    ln_s versions_path, versions_local
+    #mkdir_p versions_local
+    #ln_s versions_path, versions_local
   end
 
   test do
