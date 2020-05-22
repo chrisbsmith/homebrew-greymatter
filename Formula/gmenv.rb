@@ -21,7 +21,7 @@ class Gmenv < Formula
     mkdir_p versions_path unless versions_path.directory?
 
     mkdir_p versions_local
-    #ln_s versions_path, versions_local
+    ln_s versions_path, versions_local
   end
 
   test do
