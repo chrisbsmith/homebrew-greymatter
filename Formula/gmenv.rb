@@ -13,6 +13,7 @@ class Gmenv < Formula
     prefix.install ["bin", "libexec", "lib"]
 #     prefix.install "lib" if build.head?
 
+    mkdir_p "#{libexec}/#{name}/versions"
     mkdir_p "#{etc}/gmenv/versions" if File.directory?("#{etc}/gmenv/versions")
     mkdir_p "versions"
     ln_s "#{etc}/gmenv/versions", "versions"
