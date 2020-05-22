@@ -18,7 +18,7 @@ class Gmenv < Formula
     versions_path = HOMEBREW_PREFIX/"etc/#{name}/versions"
     versions_local = buildpath/"versions"
 
-    mkdir_p versions_path unless versions_local.directory?
+    mkdir_p versions_path unless versions_local.exist?
 
     #mkdir_p versions_local
     #ln_s versions_path, versions_local
