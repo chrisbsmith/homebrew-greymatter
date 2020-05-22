@@ -20,8 +20,8 @@ class Gmenv < Formula
 
     versions_path.mkpath
 
-    mkdir_p versions_local
-    ln_s versions_path, versions_local
+    #mkdir_p versions_local
+    #ln_s versions_path, versions_local
   end
 
   test do
