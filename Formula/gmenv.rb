@@ -12,6 +12,10 @@ class Gmenv < Formula
   def install
     prefix.install ["bin", "libexec", "lib"]
 #     prefix.install "lib" if build.head?
+
+    mkdir_p "#{etc}/gmenv/versions" if File.directory?("#{etc}/gmenv/versions")
+    mkdir_p "versions"
+    ln_s "#{etc}/gmenv/versions", "versions"
   end
   
   test do
